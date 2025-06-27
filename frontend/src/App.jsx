@@ -5,11 +5,16 @@ import Navbar from './component/Navbar.jsx';
 import Footer from './component/Footer.jsx';
 import SignUp from './pages/SignUp.jsx';
 import LogIn from './pages/LogIn.jsx';
+import {Toaster} from 'react-hot-toast';
+import { ToastContainer } from 'react-toastify';
+
 function App() {
   
 
   return (
     <>
+      <Toaster/>
+      <ToastContainer/>
       <Navbar/>
       <Routes>
         
