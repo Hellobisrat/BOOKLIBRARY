@@ -1,0 +1,27 @@
+nameSpace: new
+
+backend:
+  image: bisrat1/book-backend:latest
+  replicas: 2
+  port: 5000
+  mongoUri: "mongodb://mongo:27017/bookdb"
+
+frontend:
+  image: bisrat1/book-frontend:latest
+  replicas: 2
+  port: 80
+
+mongo:
+  image: mongo:6
+  port: 27017
+  pvcSize: 2Gi
+  replicas: 1
+
+secrets:
+  mongoUri: "your-mongo-uri"
+  jwtSecrets: "your-jwt-secret"
+
+ingress:
+  host: book.local
+  apipath: /api
+  frontendpath: /
