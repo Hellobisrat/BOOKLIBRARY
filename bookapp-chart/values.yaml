@@ -4,7 +4,7 @@ backend:
   image: bisrat1/book-backend:latest
   replicas: 2
   port: 5000
-  mongoUri: "mongodb://mongo:27017/bookdb"
+  MONGO_URI: "mongodb://mongo:27017/bookdb"
 
 frontend:
   image: bisrat1/book-frontend:latest

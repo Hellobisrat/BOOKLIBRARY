@@ -40,5 +40,6 @@ spec:
   ports:
     - port: {{ .Values.backend.port }}
       targetPort: {{ .Values.backend.port }}
-  type: LoadBalancer
+  type: ClusterIP
+
   
