@@ -19,7 +19,6 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-
       - name: Build backend image
         run: |
           docker build -t bisrat1/book-backend:latest ./backend
@@ -32,4 +31,5 @@ jobs:
 
       - name: Deployment notice
         run: echo "Images pushed. Deploy manually using: helm upgrade bookapp ./bookapp-chart"
+
 
