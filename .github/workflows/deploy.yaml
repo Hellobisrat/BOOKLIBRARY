@@ -31,5 +31,3 @@ jobs:
 
       - name: Deployment notice
         run: echo "Images pushed. Deploy manually using: helm upgrade bookapp ./bookapp-chart"
-
-
