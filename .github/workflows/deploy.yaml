@@ -22,13 +22,13 @@ jobs:
 
       - name: Build backend image
         run: |
-          docker build -t bisrat1/projectmanagement-backend:latest ./backend
-          docker push bisrat1/projectmanagement-backend:latest
+          docker build -t bisrat1/book-backend:latest ./backend
+          docker push bisrat1/book-backend:latest
 
       - name: Build frontend image
         run: |
-          docker build -t bisrat1/projectmanagement-frontend:latest ./frontend
-          docker push bisrat1/projectmanagement-frontend:latest
+          docker build -t bisrat1/book-frontend:latest ./frontend
+          docker push bisrat1/book-frontend:latest
 
       - name: Deployment notice
-        run: echo "Images pushed. Deploy manually to Minikube using kubectl apply -f k8s/"
+        run: echo "Images pushed. Deploy manually using: helm upgrade bookapp ./bookapp-chart"
